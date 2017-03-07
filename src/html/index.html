@@ -1,0 +1,14 @@
+@include('partials/_header.html', {
+	"title": "${{ index.heading }}$"
+})
+
+	<div class="container">
+		<h1>${{ index.heading }}$</h1>
+		<p>${{ index.footer }}$</p>
+		<hr>
+		<ul>
+			@loop('partials/_list.html', '../data/_list.json')
+		</ul>
+	</div>
+
+@include('partials/_footer.html')
